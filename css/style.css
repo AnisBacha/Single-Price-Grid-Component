@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+/*CSS RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*VARIABLES*/
+:root{
+    --BGCOLOR: hsl(204, 43%, 93%);
+
+    --CYAN: hsl(179, 62%, 43%);
+    --LIGHTERCYAN: hsl(179, 58%, 64%);
+    --BRIGHTYELLOW: hsl(71, 73%, 54%);
+    --LIGHTGRAY: hsl(204, 43%, 93%);
+    --GRAYISHBLUE: hsl(218, 22%, 67%);
+
+    --FONTFAMILY:"KARLA";
+    --FONTSIZE-S: 1rem;
+    --FONTSIZE-M: 1.5rem;
+    --FONTSIZE-L: 2rem;
+
+    --PADDING-S: 1rem;
+    --PADDING-M: 1.5rem;
+    --PADDING-L: 2rem;
+    --MARGIN-S: 1rem;
+    --MARGIN-M: 1.5rem;
+    --MARGIN-L: 3rem;
+
+}
+/*GENERAL STYLES*/
+body{
+    font-size: var(--FONTSIZE-S);
+    font-family: var(--FONTFAMILY);
+    background-color:var(--BGCOLOR);
+
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.main{
+    margin: var(--MARGIN-L) var(--MARGIN-S);
+    background-color: white;
+    border-radius: 10px;
+
+    /* width: clamp(150px); */
+    width: 300px;
+}
+/*|| WELCOME*/
+.main__h1{
+    padding: var(--PADDING-S);
+    color: var(--CYAN);
+}
+.main__smallp{
+    padding: var(--PADDING-S);
+    color: var(--BRIGHTYELLOW);
+    font-weight: bold;
+}
+.main__largep{
+    padding: var(--PADDING-S);
+    line-height: 1.5rem;
+    color: var(--GRAYISHBLUE);
+}
+/*|| SIGN UP*/
+.main__signup{
+    background-color: var(--CYAN);
+    width: 100%;
+    padding: var(--PADDING-S);
+    color: var(--LIGHTGRAY);
+}
+.main__h3{
+    padding-inline: var(--PADDING-S);
+}
+.main__price{
+    font-size: var(--FONTSIZE-L);
+    font-weight: bold;
+    padding: var(--PADDING-S);
+
+    position: relative;
+}
+.main__span{
+    font-size: var(--FONTSIZE-S);
+    font-weight: normal;
+    color:hsla(203, 44%, 93%, 0.712);
+    
+    padding: var(--PADDING-S);
+    position: absolute;
+    top: 7.5px;
+}
+.main__advantages{
+    padding-inline: var(--PADDING-S);
+}
+.main__link{
+    margin: var(--MARGIN-S);
+    padding: var(--PADDING-S);
+    background-color: var(--BRIGHTYELLOW) ;
+    text-align: center;
+    
+    width: 250px;
+    border-radius: 5px;
+}
+.main__link a:any-link{
+    text-decoration: none;
+    text-align: center;
+    font-weight: bolder;
+    color:hsl(203, 44%, 93%) ;
+}
+
+/*|| WHY US*/
+.main__whyus{
+    background-color: hsl(179, 54%, 49%);
+    color:var(--LIGHTGRAY);
+    padding: var(--PADDING-S);
+
+    border-radius: 0 0 10px 10px  ;
+}
+.main__list{
+    list-style-type: none;
+    padding: var(--PADDING-S);
+
+    color: hsla(203, 44%, 93%, 0.781) ;
+    line-height: 1.5rem;
+}
+
+/*DESKTOP VIEW*/
+@media screen and (min-width: 768px) {
+    .main{
+        margin: var(--MARGIN-L) var(--MARGIN-S);
+        background-color: white;
+        border-radius: 10px;
+        width: 600px;
+        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 1fr;
+    }
+    .main__welcome{
+        grid-column: 1/3;
+        padding: 2rem;
+    }
+    .main__signup{
+        border-radius: 0 0 0 10px;
+    }
+    .main__whyus{
+        border-radius: 0 0 10px 0;
+    }
+}
